@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Defining the best area to project a wellfield</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Homepage</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Homepage</a></li>
+							<li><a href="generic.html">Presentations</a></li>
+							<li><a href="elements.html">CV</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/philliperalin/" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+							<li><a href="https://github.com/philliperalin" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h3>Defining the best area to project a wellfield in Caçapava - SP, Brazil</h3>
+									<p>Implementation of a wellfield in Caçapava - SP, Brazil. This was planned with 
+										its constructive parameters in the best hydrogeologic area defined using public 
+										data. The aim of this project is to meet the demand of a possible abrupt population 
+										growth of 20,000 people.</p>
+								</header>
+								<center><img src="images/wellfield-cover.png" alt=""></center>
+								<p style="text-align:center; line-height:1.1"><font size="-1">
+									Wellfield position with the protected area (light green area) and wells (blue and green dots).
+								</font></p>
+								<h4>Skills and Tools Used</h4>
+                                <div class="row">
+                                    <div class="col-6 col-12-small">
+                                        <ul>
+                                            <li>Analysis of hydrogeologic data.</li>
+                                            <li>Pumping test data analysis.</li>
+                                            <li>Groundwater recharge calculation.</li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-12-small">
+                                        <ul>
+                                            <li>Python.</li>
+                                            <li>ArcGIS.</li>
+                                            <li>Google Earth Engine Python API.</li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+								<p>This project was designed and carried out with the collaboration of Cleilson Gama. This page 
+									briefly summarizes the work done to achieve the goal of the project.
+								</p>
+                                <h4>Objectives</h4>
+								<p>Implementation of a wellfield with its constructive parameters in the municipality of 
+									Caçapava to meet the demand of possible abrupt population growth of 20 thousand people.
+									As well as define the best area to construct the wellfield. The objective was reached by doing:
+								</p>
+								<ul>
+									<li>Study of the Caçapava geologic/hydrogeologic context.</li>
+									<li>Collect of public hydrogeologic data.</li>
+									<li>Maps making: aquifer thickness, water static level, specific capacity, etc.</li>
+									<li>Transmissivity calculation by using empiral relationship with specific capacity.</li>
+									<li>Define the best transmissivity region.</li>
+									<li>Study of contamined areas.</li>
+									<li>Define the well pump motor, drilling method, well casing and filter pack.</li>
+									<li>Define the well quantity and the distance by calculating the interference between by using Theis equation.</li>
+									<li>Operational control and preventive maintenance planning.</li>
+									<li>Project total cost for a 25 years of production.</li>
+									<li>Groundwater recharge calculation and environmental feasibility study.</li>
+									
+								</ul>
+                                
+								<h4>Study of the Caçapava geologic/hydrogeologic context.</h4>
+								<center><img src="images/wellfield-geo.png" alt=""></center>
+								<p>Caçapava is located in a Cenozoic rift basin. In this municipality, there is a high of bedrock.  
+									The aquifer is majority unconfined and has a heterogeneous character and is defined as a large thick sandstone. 
+									Transmissivity values found in the literature range between 1.2E-04 and 9.5E-03 m2/s.
+								</p>
+
+								<h4>Collect of public hydrogeologic data and maps making.</h4>
+								<center><img src="images/wellfield-esp.png" alt=""></center>
+								<p style="text-align:center; line-height:1.1"><font size="-1">
+									Aquifer thickness map. This was done by using Ordinary Kriging in the available public data 
+									(dots). The red circle represents the urban area of Caçapava. This map is one example of the 
+									total maps produced to support the decision-making.
+								</font></p>
+
+								
+
+								<h4>Transmissivity calculation by using empiral relationship with specific capacity.</h4>
+								<center><img src="images/wellfield-T-relation.png" alt=""></center>
+								<p>The procedure applied to estimate the transmissivity values can be viewed in this <a href="https://github.com/philliperalin/cacapava-wellfield-project/blob/main/transmissivity/Sc_T.ipynb" target="_blank">notebook</a> in the github repo.
+								</p>
+
+								<h4>Define the best transmissivity region.</h4>
+								<center><img src="images/wellfield-T.png" alt=""></center>
+								<p style="text-align:center; line-height:1.1"><font size="-1">
+									Distribution of the transmissivity data for the area of interest (left hand side boxplot) against
+									transmissivity data of the Caçapava.
+								</font></p>
+								
+								
+								<h4>Study of contamined areas.</h4>
+								<center><img src="images/wellfield-cetesb.png" alt=""></center>
+								<p style="text-align:center; line-height:1.1"><font size="-1">
+									Data of contamined areas collected. The green circles is contamined areas. The black 
+									rectangle represent the area of interest to construct the wellfield.
+								</font></p>
+
+								<h4>Define the well pump motor, drilling method, well casing and filter pack.</h4>
+								<center><img src="images/wellfield-waterpump.png" alt=""></center>
+								<p>The water pump is a EBARA BHSE 8105-02. Water pump of 8'', 35HP, and 26.1kW. 
+									Galvanized well casing 8''. The water pump motor will be located between 75 and 85 meters in depth.
+									The well was planned to have large diameter boring with grout seal and gravel pack along the well screen.
+								</p>
+
+								<h4>Define the well quantity and the distance by calculating the interference between by using Theis equation.</h4>
+								<center><img src="images/wellfield-cover.png" alt=""></center>
+								<p>The interference and distance between the wells were calculated using the Theis solution and Jacob
+									drawdown correction for unconfined aquifers using the available data. 
+								</p>
+
+								
+								<h4>Project total cost for a 25 years of production.</h4>
+								
+								<p>The project to work for 25 years has a total cost of 13,910,000 BRL. This cost accounts for 
+									the drilling, construction, water well pumps, maintenance costs, energy for 25 years, and the 
+									price to buy the place.
+								</p>
+
+								<h4>Groundwater recharge calculation and environmental feasibility study.</h4>
+								<center><img src="images/recharge.png" alt="" width="1200"></center>
+								<p>The groundwater recharge were calculated using the Thornthwaite-Matter Procedure and Google Earth Engine. It can be 
+									viewed in this <a href="https://github.com/philliperalin/cacapava-wellfield-project/blob/main/groundwater_recharge/groundwater-recharge.ipynb" target="_blank">notebook</a>. 
+									This study showed that the wellfield will not over exploit the aquifer. 
+
+								</p>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<!--<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>-->
+
+				<!-- Copyright -->
+					<!--<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>-->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

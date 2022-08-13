@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ANALYSIS OF PUMPING TEST DATA FROM PAPERS USING WELLTESTPY PYTHON LIBRARY</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Homepage</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Homepage</a></li>
+							<li><a href="generic.html">Presentations</a></li>
+							<li><a href="elements.html">CV</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/philliperalin/" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+							<li><a href="https://github.com/philliperalin" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h3>ANALYSIS OF PUMPING TEST DATA FROM PAPERS USING WELLTESTPY PYTHON LIBRARY</h3>
+									<p>This project was the aim to collect pumping test data from many papers. Using 
+										Welltestpy and Anaflow Python libraries analyze the data collected, characterize 
+										the aquifer using the best solution for each case and compare these results with 
+										the paper results.</p>
+								</header>
+								<div class="image main"><img src="images/undergrad-thesis-cover.png" alt="" /></div>
+								<h4>Skills and Tools Used</h4>
+                                <div class="row">
+                                    <div class="col-6 col-12-small">
+                                        <ul>
+                                            <li>Numerical modeling.</li>
+                                            <li>Pumping test data analisys.</li>
+                                            <li>Aquifer characterization.</li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-12-small">
+                                        <ul>
+                                            <li>Python.</li>
+                                            <li>OpenGeoSys.</li>
+                                            <li>Gmsh.</li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <h4>Introduction to the Project</h4>
+                                <p>It is of great importance to have knowledge of how the hydraulics of an aquifer in which quality use will be projected, which ease and remediation of improvements to the most efficient areas. A pumping test is a commonly used technique for aquifer investigation. With this, it is possible to obtain data on the evolution of the water level drawdown curve over time and use them to characterize the hydraulic properties of the aquifer. Among the conventional methods, the most famous are Cooper-Jacob [1946] and the use of the analytical solution of Theis [1935] for the estimation of the transmissivity (T) and the calculation of the storativity (S). These conventional methods assume that the aquifers are homogeneous, that is, they have constant T and S. However, the vast majority of aquifers are heterogeneous.
+                                </p>
+                                <p>To overcome the limitations of conventional methods in the analysis of heterogeneous aquifers, some techniques were used, such as the use of data from many observation wells during a pumping test in its stationary stage to create hydrographs and analyze the heterogeneity [Wen et al., 2010]. Methods were developed to characterize the geostatistical hydraulic parameters of a heterogeneous aquifer, for example by using an inverse geostatistical method in Hydraulic Tomography [Yeh and Liu, 2000] and by expanding the Theis and Thiem solution for heterogeneous aquifers with log-normal distribution [Zech et al., 2012; and Zech et al., 2016]. There are several theoretical studies investigating the characterization of the heterogeneity of an aquifer using numerical models [Wu et al., 2005] and sandbox models [Berg and Illman, 2011].
+                                </p>
+                                <p>Investigating methods for characterizing aquifer heterogeneity Wu et al. [2005] used a heterogeneous T field and Berg and Illman [2011] a sandbox with layers of different hydraulic conductivity (K). In addition, analytical methods assume that the flow of water during a pumping test is laminar and horizontal. However, there are several aquifers of complex geometry [e. g., Gutentag et al., 1984; Viguier et al., 2018] that during a pumping test they can present vertical components of water flow and can cause erroneous estimates of the T of these aquifers.
+                                </p>
+                                <p>With the hypothesis that aquifers of complex geometry can cause wrong estimates of T from the analysis of pumping test data, this project proposes to investigate possible aquifer geometries that result in a deviation between the estimated T values and the actual T values of an aquifer from the use of analytical solutions for heterogeneous aquifers since the variation of the thickness of an aquifer (complex geometry) characterizes it as a heterogeneous T aquifer. Therefore, the approach of this project will be through the use of numerical models for the creation of a field of heterogeneous thickness of aquifer of two dimensions (a horizontal and a vertical axis). It will be able to provoke water flows in the porous medium with vertical components during a pumping test. This could lead to a divergence of the estimated T values of the aquifer when compared to the actual T values from the use of analytical solutions. With this, it will be possible to measure the magnitude of the transmissivity estimation errors caused by the irregularity of the thickness of a confined aquifer.
+                                </p>
+								<h4>References</h4>
+								<p>Berg, S. J., and W. A. Illman, 2011. Capturing aquifer heterogeneity: Comparison of approaches through controlled sandbox experiments, Water Resour. Res., 47, W09514, doi:10.1029/2011WR010429.</p>
+								<p>Cooper, H. H., Jr., and C. E. Jacob, 1946. A generalized graphical method for evaluating formation constants and summarizing well-field history, Eos Trans. AGU, 27(4), 526–534.</p>
+								<p>Gutentag, E. G., F. J. Heimes, N. C. Krothe, R. R. Luckey, and J. B. Weeks. 1984. Geohydrology of the High Plains Aquifer in parts of Colorado, Kansas, Nebraska, New Mexico, Oklahoma, South Dakota, Texas, and Wyoming. U.S. Geological Survey Professional Paper 1400-B.</p>
+								<p>Theis, C. V. (1935), The relation between lowering the piezometric surface and the rate and duration of discharge of a well using ground water storage, Eos Trans. AGU, 16, 519–524.</p>
+								<p>Wen, J. C., C. M. Wu, T.-C. J. Yeh, and C. M. Tseng (2010), Estimation of effective aquifer hydraulic properties from an aquifer test with muti-well observations (Taiwan), Hydrogeol. J., 18, 1143–1155, doi:10.1007/ s10040-010-0577-1</p>
+								<p>Wu, C. M., T.-C. J. Yeh, J. Zhu, T. H. Lee, N. S. Hsu, C. H. Chen, and A. F. Sancho (2005), Traditional analysis of aquifer tests: Comparing apples to oranges?, Water Resour. Res., 41, W09402, doi:10.1029/2004WR003717.</p>
+								<p>Yeh, T. C. J., & Liu, S. (2000). Hydraulic tomography: Development of a new aquifer test method. Water Resources Research, 36(8), 2095-2105. https://doi.org/10.1029/2000WR900114</p>
+								<p>Zech, A., S. Muller, J. Mai, F. Heße, and S. Attinger. 2016. `Extending Theis' solution: Using transient pumping tests to estimate parameters of aquifer heterogeneity. Water Resources Research 52, no. 8: 6156–6170. https://doi.org/ 10.1002/2015WR018509</p>
+								<p>Zech, A., C.L. Schneider, and S. Attinger. 2012. The extended Thiem’s solution Including the impact of heterogeneity. Water Resources Research 48, no. 10: W10535. https://doi .org/10.1029/2012WR011852</p>
+
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<!--<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>-->
+
+				<!-- Copyright -->
+					<!--<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>-->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
