@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Benchmark</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Homepage</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Homepage</a></li>
+							<li><a href="generic.html">Presentations</a></li>
+							<li><a href="elements.html">CV</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/philliperalin/" class="icon brands fa-linkedin"><span class="label">Instagram</span></a></li>
+							<li><a href="https://github.com/philliperalin" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h3>A benchmark for a 1D radial flow pumping test</h3>
+									
+								</header>
+								<center><img src="images/pred-obs.png" alt=""></center>
+								<p style="text-align:center; line-height:1.1"><font size="-1">
+                                    Scatterplot of drawdowns from pairs of observation well during the numerical pumping tests modeling. 
+                                    The predicted heads was obtained using 1D GRF solution.
+								</font></p>
+								<h4>Topics, Skills and Tools Used</h4>
+                                <div class="row">
+                                    <div class="col-6 col-12-small">
+                                        <ul>
+                                            <li>Pumping test numerical model.</li>
+                                            <li>GRF model.</li>
+                                            <li>OpenGeoSys.</li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-12-small">
+                                        <ul>
+                                            <li>Python.</li>
+                                            <li>Anaflow.</li>
+                                            <li>Gmsh.</li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                
+								<h4>Formulation</h4>
+                                <h5>GRF model</h5>
+                                <p>To validate the results of the simulations, for example for the construction of a benchmark, it is normal to use analytical solutions that describe the process in which the numerical model will simulate. For pumping test modeling, the Theis solution (1935) is normally used for this purpose. The modeling of this project is characterized by having a domain with two dimensions where the water flow is unidimensional (along the x axis),
+                                    for the simplest case of an aquifer with constant thickness (benchmark). However, Theis solution describes the drawdown of hydraulic loads through the radial flow of groundwater. Thus, it was necessary to use an analytical solution that describes this one-dimensional flow and, therefore, can describe the data obtained by the numerical model in order to establish the benchmark for the problem. This equation used is the solution of
+                                    Generalized Radial Flow Model (GRF), developed by Baker (1988).</p>
+                                <p>
+                                    The GRF was created with the objective of solving the problem of describing the drawdown of hydraulic loads due to pumping in fractured media. The specific problem is
+                                    choose the appropriate geometry of a fracture system in which underground flow occurs. This solution was developed by generalizing the dimensional flow to non-integral values
+                                    while maintaining the assumptions of radial flow and aquifer homogeneity. In this way, the GRF is able to describe the drop in hydraulic loads in various forms used (geometry) in pumping tests (Baker, 1988). The assumptions of this model are:
+                                    <ul>
+                                        <li>Groundwater flow is radial and n-dimensional in a homogeneous and isotropic medium with hydraulic conductivity Kf and specific storage Ssf .</li>
+                                        <li>Darcy's law applies to the entire system.</li>
+                                        <li>Water withdrawal from the system is through an n-dimensional sphere with radius rw and storage capacity Sw.</li>
+                                        
+                                    </ul>
+                                
+                                </p>
+                                <p>The following GRF analytical solution (Baker, 1988) is an equation that has been generalized from Theis (1935) solution:</p>
+								<p>$$h(r, t) = \frac{Q_0 r^{2 \nu}}{4 \pi^{1 - \nu} K_f b^{3 - n}} \Gamma(-\nu, u) \qquad \nu<1 $$ </p>
+
+                                <p>With: </p>
+                                <p>$$\nu = 1 - \frac{n}{2} $$ </p>
+                                <p>$$u = \frac{S_{sf} r^2}{4 K_f t} $$ </p>
+                                <p>$$\Gamma(s, x) = \int_{x}^{\infty} t^{s - 1} e^{-t} \,dx $$ </p>
+                                <p>Where: </p>
+                                <ul>
+                                    <li>h(r, t) is the function of describing the hydraulic loads for position r at time t for the system.</li>
+                                    <li>Q0 is the constant pump rate.</li>
+                                    <li>r is radial distance from the pumping well.</li>
+                                    <li>n is the system dimension.</li>
+                                    <li>b is the extent of the flow region.</li>
+                                    <li>t being the time</li>
+                                    
+                                </ul>
+                                <p>For the problem of this project, as already mentioned, the flow of water in the porous medium occurs in a one-dimensional way, therefore, n = 1. As a result, we have the following form of the GRF model solution, used in the data analysis:</p>
+                                <p>$$h(r, t) = \frac{Q_0 r}{2 \sqrt{\pi} K_f b^2} (\frac{e^{-u}}{\sqrt{u}} - \sqrt{\pi} {erfc} \sqrt{u})$$</p>
+                                <p>Where erfc is the complementary error function. Note that for the case of n = 2 the GRF model solution becomes the Theis solution. The GRF solution was applied through the use of the Python Anaflow library for the implementation of the benchmark.</p>
+                                
+                                <h5>Numerical model governing equation</h5>
+                                <p>A confined aquifer model, isotropic and with homogeneous K was created. The governing equation of groundwater flow in a confined aquifer is governed primarily by the hydraulic head variable. The groundwater flow equation for this case is derived from the principles of conservation of mass and momentum within continuum mechanics. The description of fluid movement used was the Eulerian one in which it considers its observation in a control volume through which this fluid enters and leaves</p>
+                                
+                                <p>The groundwater flow was considered in a non-deformable porous medium. 
+                                    In this way the only way for the water to flow is through the empty spaces. 
+                                    The porosity (n) is given by the ratio of these voids to the total volume of the medium. 
+                                    As it was considered that the medium is not deformable and, therefore, 
+                                    the empty spaces variable is considered constant throughout the simulation. 
+                                    With this we have that the mass balance equation (fluid) in a static porous medium is given by:</p>
+                                <p>$$\frac{\partial n \rho}{\partial t} + \nabla (n \rho v) = Q_{\rho}$$</p>
+									
+								<p>Where ρ is the fluid density [kg/m³], t the time [s], v the velocity vector [m/s] 
+                                    and Qρ the groundwater entry term into the system [kg/m³s]. Considering water as an 
+                                    incompressible fluid and, therefore, with constant density (“outside” the derivation) 
+                                    this implies that ρ = ρ0. Dividing the above equation by ρ0 we have:</p>
+									<p>$$\frac{\partial n}{\partial t} + \nabla (n v) = \frac{Q_{\rho}}{\rho_0}$$</p>
+								
+								<p>The Storativity (S) is a concept that encompasses the change of n over time. 
+                                    The relationship between the change in n and the hydraulic head (h in m) with 
+                                    time is linear with a change ratio factor S:</p>
+									
+								<p>$$\frac{\partial n}{\partial t} = S \frac{\partial h}{\partial t}$$</p>
+								<p>We also have the linear relationship that explains the groundwater 
+                                    flow due to a hydraulic head gradient in space in porous media, with 
+                                    K as a proportion factor. This relationship is given by the Darcy equation:</p>
+								<p>$$n v = q = -K \nabla h$$</p>
+                                <p>Combining the balance equation (second equation) with the constitutive equations 
+                                    (third and fourth equations in this governing equation section), results in the governing equation for groundwater 
+                                    flow in confined aquifers used in the simulation:</p>
+                                <p>$$S \frac{\partial h}{\partial t} - \nabla (K \nabla h) = Q$$</p>
+									
+                                <h5>Results</h5>
+                                <center><img src="images/drawdown-curve.png" alt=""></center>
+								<p style="text-align:center; line-height:1.1"><font size="-1">
+                                    Drawdown curve obtained of the conducted experiment. Observed head was got from numerical 
+                                    modeling (black dots). </br>Predicted heads was obtained from the 1D GRF model equation (blue curve).
+								</font></p>
+
+                                <center><img src="images/pred-obs.png" alt=""></center>
+								<p style="text-align:center; line-height:1.1"><font size="-1">
+                                    Scatterplot of drawdowns from pairs of observation well during the numerical pumping tests modeling. </br>
+                                    The predicted heads was obtained using 1D GRF solution.
+								</font></p>
+
+								<h5>References</h5>
+								<p>Barker, J.A., 1988. A generalized radial flow model for hydraulic tests in fractured rock, Water Resources Research, vol. 24, no. 10, pp. 1796-1804.</p>
+								<p>Theis, C. V. (1935), The relation between lowering the piezometric surface and the rate and duration of discharge of a well using ground water storage, Eos Trans. AGU, 16, 519–524.</p>
+								
+								
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<!--<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>-->
+
+				<!-- Copyright -->
+					<!--<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>-->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
